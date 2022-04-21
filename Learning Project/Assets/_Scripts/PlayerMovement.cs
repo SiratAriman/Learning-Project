@@ -6,14 +6,15 @@ using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float ForwardSpeed;
-    public float SideSpeed;
-    [SerializeField] private Transform Player;
+    [SerializeField] private float BackSpeed;
+    [SerializeField] private float ForwardSpeed;
+    [SerializeField] private float SideSpeed;
+    private Transform Player;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = this.gameObject.transform;
     }
 
     // Update is called once per frame
@@ -37,5 +38,8 @@ public class PlayerMovement : MonoBehaviour
                     transform.Translate(SideSpeed * Time.deltaTime * Vector3.right);
                 }
             }
+        
+            
+            
     }
 }

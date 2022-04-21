@@ -19,7 +19,6 @@ public class CameraFollow : MonoBehaviour
     {
         CamPosition = PlayerPosition.position + CamOffset;
         transform.position = Vector3.Lerp(transform.position,CamPosition, SmoothSpeed) ;
-        Vector3.MoveTowards
     }
     
 }
